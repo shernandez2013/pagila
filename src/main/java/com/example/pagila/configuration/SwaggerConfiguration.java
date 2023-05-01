@@ -25,7 +25,7 @@ public class SwaggerConfiguration implements WebMvcConfigurer {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.siheca.country"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.pagila"))
                 .paths(PathSelectors.any())
                 .build().directModelSubstitute(LocalDate.class, java.sql.Date.class)
                 .directModelSubstitute(LocalDateTime.class, java.util.Date.class)
